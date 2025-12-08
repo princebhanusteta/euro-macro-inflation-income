@@ -162,3 +162,172 @@ def makeEmploymentIndexLong(rawEmployment: pd.DataFrame) -> pd.DataFrame:
     dfLong = splitKeyAndMeltToLong(rawEmployment, valueName="employmentIndex")
     dfLong = addQuarterlyPeriodColumn(dfLong)
     return dfLong
+
+
+def _validQuarterRange():
+    """
+    Helper to get the canonical quarterly range for the project:
+    2000Q1 to 2024Q4, inclusive.
+    """
+    return pd.period_range("2000Q1", "2024Q4", freq="Q-DEC")
+
+
+def _aggregateMonthlyToQuarterlyMean(
+    dfLong: pd.DataFrame,
+    valueCol: str,
+    groupingDims,
+    monthPeriodCol: str = "timeMonth",
+    quarterCol: str = "timeQuarter",
+    countCol: str = "nMonths",
+) -> pd.DataFrame:
+    """
+    Aggregate monthly values to quarterly means.
+
+    For each (groupingDims, quarter) we compute the mean of available
+    monthly values and record how many months were used.
+
+    Parameters
+    ----------
+    dfLong : DataFrame
+        Long monthly table with a Period[M] column (monthPeriodCol).
+    valueCol : str
+        Name of the numeric column to aggregate.
+    groupingDims : list-like
+        Dimension columns (e.g. ['freq', 'unit', 'coicop', 'geo']).
+    monthPeriodCol : str
+        Column with monthly periods.
+    quarterCol : str
+        Name of the quarterly period column to create.
+    countCol : str
+        Name for the column storing number of contributing months.
+
+    Returns
+    -------
+    DataFrame
+        Quarterly table with mean values and a month-count column.
+    """
+    df = dfLong.copy()
+
+    # Map each month to its quarter (correct dt usage)
+    df[quarterCol] = (
+        df[monthPeriodCol]
+        .dt.to_timestamp()        # period[M] -> Timestamp
+        .dt.to_period("Q-DEC")    # -> period[Q-DEC]
+    )
+
+    # Restrict to canonical project range 2000Q1–2024Q4
+    valid_quarters = _validQuarterRange()
+    df = df[df[quarterCol].isin(valid_quarters)]
+
+    group_cols = list(groupingDims) + [quarterCol]
+
+    agg = (
+        df.groupby(group_cols, dropna=False)[valueCol]
+          .agg(["mean", "count"])
+          .reset_index()
+    )
+
+    agg = agg.rename(columns={"mean": valueCol, "count": countCol})
+    return agg
+
+def makeHicpIndexQuarterly(hicpIndexLong: pd.DataFrame) -> pd.DataFrame:
+    """
+    Aggregate monthly HICP index to quarterly means for 2000Q1–2024Q4.
+
+    Output columns include:
+    - freq, unit, coicop, geo
+    - timeQuarter (period[Q-DEC])
+    - hicpIndex (quarterly mean)
+    - nMonths (number of monthly observations used: 1–3)
+    """
+    groupingDims = ["freq", "unit", "coicop", "geo"]
+    return _aggregateMonthlyToQuarterlyMean(
+        hicpIndexLong,
+        valueCol="hicpIndex",
+        groupingDims=groupingDims,
+        monthPeriodCol="timeMonth",
+        quarterCol="timeQuarter",
+        countCol="nMonths",
+    )
+
+
+def makeHicpInflationQuarterly(hicpInflationLong: pd.DataFrame) -> pd.DataFrame:
+    """
+    Aggregate monthly HICP inflation to quarterly means for 2000Q1–2024Q4.
+    """
+    groupingDims = ["freq", "unit", "coicop", "geo"]
+    return _aggregateMonthlyToQuarterlyMean(
+        hicpInflationLong,
+        valueCol="hicpInflation",
+        groupingDims=groupingDims,
+        monthPeriodCol="timeMonth",
+        quarterCol="timeQuarter",
+        countCol="nMonths",
+    )
+
+def expandAnnualToQuarterly(
+    dfAnnual: pd.DataFrame,
+    yearCol: str = "timeYear",
+    quarterCol: str = "timeQuarter",
+) -> pd.DataFrame:
+    """
+    Expand an annual table to quarterly by repeating each row for Q1–Q4.
+
+    Parameters
+    ----------
+    dfAnnual : DataFrame
+        Long annual table with a Period[Y] column (yearCol).
+    yearCol : str
+        Name of the annual period column.
+    quarterCol : str
+        Name of the quarterly period column to create.
+
+    Returns
+    -------
+    DataFrame
+        Quarterly table with each annual observation repeated four times.
+    """
+    df = dfAnnual.copy()
+
+    # Build Q1 of each year explicitly, e.g. "2000" -> "2000Q1"
+    year_str = df[yearCol].astype("string")
+    base_quarter = pd.PeriodIndex(year_str + "Q1", freq="Q-DEC")
+
+    frames = []
+    for offset in range(4):
+        tmp = df.copy()
+        tmp[quarterCol] = base_quarter + offset  # Q1, Q2, Q3, Q4
+        frames.append(tmp)
+
+    df_q = pd.concat(frames, ignore_index=True)
+
+    # Restrict to canonical quarter range
+    valid_quarters = _validQuarterRange()
+    df_q = df_q[df_q[quarterCol].isin(valid_quarters)]
+
+    return df_q
+
+
+def makeIncomeQuarterly(incomeLong: pd.DataFrame) -> pd.DataFrame:
+    """
+    Expand annual income quantiles to quarterly frequency.
+
+    Each (freq, quantile, indic_il, currency, geo, timeYear) row becomes
+    four rows, one per quarter, for 2000Q1–2024Q4.
+    """
+    return expandAnnualToQuarterly(
+        incomeLong,
+        yearCol="timeYear",
+        quarterCol="timeQuarter",
+    )
+def makeEmploymentQuarterly(employmentLong: pd.DataFrame) -> pd.DataFrame:
+    """
+    Ensure employment table is restricted to the canonical quarter range.
+
+    The input is already quarterly; we just drop any quarters outside
+    2000Q1–2024Q4 if they exist.
+    """
+    df = employmentLong.copy()
+    valid_quarters = _validQuarterRange()
+    df = df[df["timeQuarter"].isin(valid_quarters)]
+    return df
