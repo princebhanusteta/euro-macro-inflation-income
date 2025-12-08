@@ -7,6 +7,7 @@ from src.config import (
     METADATA_DIR,
     GEO_LABELS_FILE,
     COICOP_LABELS_FILE,
+    NACE_LABELS_FILE,
 )
 
 
@@ -82,3 +83,7 @@ def loadCoicopLabels() -> pd.DataFrame:
     Load metadata table with COICOP CP00–CP12 labels.
     """
     return pd.read_csv(COICOP_LABELS_FILE, sep="\t")
+
+def loadNaceLabels() -> pd.DataFrame:
+    """Load NACE Rev.2 aggregate labels used in the employment dataset."""
+    return pd.read_csv(NACE_LABELS_FILE)

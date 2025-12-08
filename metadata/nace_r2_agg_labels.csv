@@ -1,0 +1,13 @@
+nace_r2,label
+TOTAL,Total - all NACE activities
+A,"Agriculture, forestry and fishing"
+B-E,Industry (except construction)
+C,Manufacturing
+F,Construction
+G-I,Wholesale and retail trade; transport; accommodation and food service activities
+J,Information and communication
+K,Financial and insurance activities
+L,Real estate activities
+M_N,"Professional, scientific and technical activities; administrative and support service activities"
+O-Q,"Public administration, defence, education, human health and social work activities"
+R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies"

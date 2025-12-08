@@ -14,6 +14,7 @@ REPORTS_DIR = PROJECT_ROOT / "reports"
 # Metadata file paths 
 GEO_LABELS_FILE = METADATA_DIR / "geo_labels_36.csv"
 COICOP_LABELS_FILE = METADATA_DIR / "coicop_cp00_cp12_labels.tsv"
+NACE_LABELS_FILE   = METADATA_DIR / "nace_r2_agg_labels.csv"
 
 # Fixed list of 36 geos used in the project
 # Codes are consistent with geo_labels_36.csv
