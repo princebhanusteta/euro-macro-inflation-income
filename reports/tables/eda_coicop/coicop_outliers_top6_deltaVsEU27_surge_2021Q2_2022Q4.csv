@@ -1,0 +1,37 @@
+coicopCol,coicopCode,coicopLabel,geo,geoLabel,deltaPp,side
+hicpInflation_CP01,CP01,Food and non-alcoholic beverages,BG,Bulgaria,6.280952380952381,best
+hicpInflation_CP01,CP01,Food and non-alcoholic beverages,LT,Lithuania,9.042857142857141,best
+hicpInflation_CP01,CP01,Food and non-alcoholic beverages,HU,Hungary,9.757142857142856,best
+hicpInflation_CP01,CP01,Food and non-alcoholic beverages,CH,Switzerland,-7.504761904761906,worst
+hicpInflation_CP01,CP01,Food and non-alcoholic beverages,NO,Norway,-5.03809523809524,worst
+hicpInflation_CP01,CP01,Food and non-alcoholic beverages,IE,Ireland,-3.5285714285714294,worst
+hicpInflation_CP02,CP02,"Alcoholic beverages, tobacco and narcotics",CZ,Czechia,3.1619047619047613,best
+hicpInflation_CP02,CP02,"Alcoholic beverages, tobacco and narcotics",SK,Slovakia,3.6809523809523803,best
+hicpInflation_CP02,CP02,"Alcoholic beverages, tobacco and narcotics",HU,Hungary,6.780952380952381,best
+hicpInflation_CP02,CP02,"Alcoholic beverages, tobacco and narcotics",EL,Greece,-3.304761904761905,worst
+hicpInflation_CP02,CP02,"Alcoholic beverages, tobacco and narcotics",CY,Cyprus,-2.947619047619048,worst
+hicpInflation_CP02,CP02,"Alcoholic beverages, tobacco and narcotics",IT,Italy,-2.923809523809524,worst
+hicpInflation_CP04,CP04,"Housing, water, electricity, gas and other fuels",BE,Belgium,11.809523809523814,best
+hicpInflation_CP04,CP04,"Housing, water, electricity, gas and other fuels",LT,Lithuania,19.695238095238096,best
+hicpInflation_CP04,CP04,"Housing, water, electricity, gas and other fuels",EE,Estonia,24.471428571428575,best
+hicpInflation_CP04,CP04,"Housing, water, electricity, gas and other fuels",CH,Switzerland,-9.214285714285714,worst
+hicpInflation_CP04,CP04,"Housing, water, electricity, gas and other fuels",IS,Iceland,-7.7142857142857135,worst
+hicpInflation_CP04,CP04,"Housing, water, electricity, gas and other fuels",MT,Malta,-7.39047619047619,worst
+hicpInflation_CP05,CP05,"Furnishings, household equipment and routine household maintenance",LT,Lithuania,3.833333333333335,best
+hicpInflation_CP05,CP05,"Furnishings, household equipment and routine household maintenance",EE,Estonia,4.561904761904763,best
+hicpInflation_CP05,CP05,"Furnishings, household equipment and routine household maintenance",HU,Hungary,5.647619047619048,best
+hicpInflation_CP05,CP05,"Furnishings, household equipment and routine household maintenance",IE,Ireland,-2.842857142857142,worst
+hicpInflation_CP05,CP05,"Furnishings, household equipment and routine household maintenance",BE,Belgium,-1.957142857142856,worst
+hicpInflation_CP05,CP05,"Furnishings, household equipment and routine household maintenance",FI,Finland,-1.752380952380952,worst
+hicpInflation_CP07,CP07,Transport,LT,Lithuania,7.423809523809524,best
+hicpInflation_CP07,CP07,Transport,EE,Estonia,7.571428571428573,best
+hicpInflation_CP07,CP07,Transport,LU,Luxembourg,7.728571428571431,best
+hicpInflation_CP07,CP07,Transport,MT,Malta,-7.485714285714285,worst
+hicpInflation_CP07,CP07,Transport,NO,Norway,-4.442857142857142,worst
+hicpInflation_CP07,CP07,Transport,CH,Switzerland,-4.185714285714285,worst
+hicpInflation_CP11,CP11,Restaurants and hotels,SK,Slovakia,6.833333333333334,best
+hicpInflation_CP11,CP11,Restaurants and hotels,HU,Hungary,7.40952380952381,best
+hicpInflation_CP11,CP11,Restaurants and hotels,CZ,Czechia,8.042857142857144,best
+hicpInflation_CP11,CP11,Restaurants and hotels,CH,Switzerland,-3.7380952380952377,worst
+hicpInflation_CP11,CP11,Restaurants and hotels,FR,France,-2.4714285714285706,worst
+hicpInflation_CP11,CP11,Restaurants and hotels,MT,Malta,-1.752380952380952,worst
