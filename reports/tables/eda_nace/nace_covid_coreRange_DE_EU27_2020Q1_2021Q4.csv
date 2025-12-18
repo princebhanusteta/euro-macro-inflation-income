@@ -1,0 +1,12 @@
+naceCode,sectorLabel,eu27Mean,deMean,coreMean,coreP10,coreP90,sectorCol
+J,Information and communication,118.175,112.8,117.25714285714287,108.05,127.815,employmentIndex_J
+F,Construction,107.675,102.1375,108.34285714285714,102.7,114.02000000000001,employmentIndex_F
+M_N,"Professional, scientific and technical activities; administrative and support service activities",106.3875,98.8625,108.31785714285714,103.0175,113.48750000000001,employmentIndex_M_N
+L,Real estate activities,105.225,101.0625,104.24285714285713,90.41499999999999,115.92750000000001,employmentIndex_L
+O-Q,"Public administration, defence, education, human health and social work activities",104.3625,105.6625,105.21607142857142,100.08749999999999,109.68,employmentIndex_O_Q
+B-E,Industry (except construction),98.825,95.375,100.03928571428571,95.88499999999999,104.5325,employmentIndex_B_E
+C,Manufacturing,98.525,94.7625,99.73928571428573,95.25750000000001,105.3775,employmentIndex_C
+K,Financial and insurance activities,97.75,88.85000000000001,99.82678571428572,91.5575,109.2675,employmentIndex_K
+R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",96.4375,93.8125,102.60357142857143,91.64750000000001,119.52250000000001,employmentIndex_R_U
+G-I,Wholesale and retail trade; transport; accommodation and food service activities,95.675,94.2125,95.83035714285714,89.935,102.505,employmentIndex_G_I
+A,"Agriculture, forestry and fishing",88.875,86.4875,94.01607142857142,85.33749999999999,103.0,employmentIndex_A

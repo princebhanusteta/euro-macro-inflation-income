@@ -1,0 +1,67 @@
+sectorCol,naceCode,sectorLabel,geo,geoLabel,deltaVsEu27,group
+employmentIndex_J,J,Information and communication,CY,CY,75.33749999999999,highest
+employmentIndex_J,J,Information and communication,LT,LT,50.91250000000001,highest
+employmentIndex_J,J,Information and communication,MT,MT,33.41250000000001,highest
+employmentIndex_J,J,Information and communication,IS,IS,-12.737499999999997,lowest
+employmentIndex_J,J,Information and communication,IT,IT,-12.412499999999994,lowest
+employmentIndex_J,J,Information and communication,EE,EE,-11.362499999999997,lowest
+employmentIndex_F,F,Construction,CY,CY,85.075,highest
+employmentIndex_F,F,Construction,MT,MT,43.500000000000014,highest
+employmentIndex_F,F,Construction,HU,HU,35.2625,highest
+employmentIndex_F,F,Construction,EE,EE,-19.912499999999994,lowest
+employmentIndex_F,F,Construction,LV,LV,-17.674999999999997,lowest
+employmentIndex_F,F,Construction,LT,LT,-14.149999999999991,lowest
+employmentIndex_M_N,M_N,"Professional, scientific and technical activities; administrative and support service activities",MT,MT,57.10000000000001,highest
+employmentIndex_M_N,M_N,"Professional, scientific and technical activities; administrative and support service activities",CY,CY,35.075,highest
+employmentIndex_M_N,M_N,"Professional, scientific and technical activities; administrative and support service activities",LU,LU,18.674999999999997,highest
+employmentIndex_M_N,M_N,"Professional, scientific and technical activities; administrative and support service activities",LV,LV,-15.587500000000006,lowest
+employmentIndex_M_N,M_N,"Professional, scientific and technical activities; administrative and support service activities",SK,SK,-11.049999999999997,lowest
+employmentIndex_M_N,M_N,"Professional, scientific and technical activities; administrative and support service activities",SI,SI,-7.75,lowest
+employmentIndex_L,L,Real estate activities,MT,MT,105.20000000000002,highest
+employmentIndex_L,L,Real estate activities,RS,RS,52.6875,highest
+employmentIndex_L,L,Real estate activities,EL,EL,47.9375,highest
+employmentIndex_L,L,Real estate activities,LT,LT,-21.4375,lowest
+employmentIndex_L,L,Real estate activities,PL,PL,-17.71249999999999,lowest
+employmentIndex_L,L,Real estate activities,RO,RO,-13.949999999999989,lowest
+employmentIndex_O_Q,O-Q,"Public administration, defence, education, human health and social work activities",MT,MT,21.0,highest
+employmentIndex_O_Q,O-Q,"Public administration, defence, education, human health and social work activities",IE,IE,20.60000000000001,highest
+employmentIndex_O_Q,O-Q,"Public administration, defence, education, human health and social work activities",LU,LU,18.125,highest
+employmentIndex_O_Q,O-Q,"Public administration, defence, education, human health and social work activities",HU,HU,-9.0,lowest
+employmentIndex_O_Q,O-Q,"Public administration, defence, education, human health and social work activities",SK,SK,-6.7124999999999915,lowest
+employmentIndex_O_Q,O-Q,"Public administration, defence, education, human health and social work activities",EE,EE,-5.9624999999999915,lowest
+employmentIndex_B_E,B-E,Industry (except construction),RS,RS,19.64999999999999,highest
+employmentIndex_B_E,B-E,Industry (except construction),IE,IE,17.974999999999994,highest
+employmentIndex_B_E,B-E,Industry (except construction),CY,CY,13.612499999999997,highest
+employmentIndex_B_E,B-E,Industry (except construction),CZ,CZ,-6.849999999999994,lowest
+employmentIndex_B_E,B-E,Industry (except construction),EE,EE,-5.875,lowest
+employmentIndex_B_E,B-E,Industry (except construction),CH,CH,-5.237499999999997,lowest
+employmentIndex_C,C,Manufacturing,RS,RS,26.27499999999999,highest
+employmentIndex_C,C,Manufacturing,IE,IE,19.299999999999997,highest
+employmentIndex_C,C,Manufacturing,CY,CY,14.875,highest
+employmentIndex_C,C,Manufacturing,CZ,CZ,-6.8500000000000085,lowest
+employmentIndex_C,C,Manufacturing,LU,LU,-6.487500000000011,lowest
+employmentIndex_C,C,Manufacturing,IS,IS,-5.637500000000003,lowest
+employmentIndex_K,K,Financial and insurance activities,LT,LT,48.0,highest
+employmentIndex_K,K,Financial and insurance activities,MT,MT,42.48750000000001,highest
+employmentIndex_K,K,Financial and insurance activities,EE,EE,40.05000000000001,highest
+employmentIndex_K,K,Financial and insurance activities,IS,IS,-10.412499999999994,lowest
+employmentIndex_K,K,Financial and insurance activities,DE,DE,-8.899999999999991,lowest
+employmentIndex_K,K,Financial and insurance activities,BE,BE,-7.412499999999994,lowest
+employmentIndex_R_U,R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",MT,MT,54.400000000000006,highest
+employmentIndex_R_U,R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",PL,PL,44.4375,highest
+employmentIndex_R_U,R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",CY,CY,21.174999999999997,highest
+employmentIndex_R_U,R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",IE,IE,-15.3125,lowest
+employmentIndex_R_U,R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",IT,IT,-8.037499999999994,lowest
+employmentIndex_R_U,R-U,"Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies",BE,BE,-7.762500000000003,lowest
+employmentIndex_G_I,G-I,Wholesale and retail trade; transport; accommodation and food service activities,MT,MT,19.512500000000003,highest
+employmentIndex_G_I,G-I,Wholesale and retail trade; transport; accommodation and food service activities,RO,RO,18.137500000000003,highest
+employmentIndex_G_I,G-I,Wholesale and retail trade; transport; accommodation and food service activities,RS,RS,13.162500000000009,highest
+employmentIndex_G_I,G-I,Wholesale and retail trade; transport; accommodation and food service activities,CH,CH,-7.049999999999997,lowest
+employmentIndex_G_I,G-I,Wholesale and retail trade; transport; accommodation and food service activities,SK,SK,-6.987499999999997,lowest
+employmentIndex_G_I,G-I,Wholesale and retail trade; transport; accommodation and food service activities,EE,EE,-6.75,lowest
+employmentIndex_A,A,"Agriculture, forestry and fishing",LU,LU,25.349999999999994,highest
+employmentIndex_A,A,"Agriculture, forestry and fishing",BE,BE,19.75,highest
+employmentIndex_A,A,"Agriculture, forestry and fishing",NL,NL,16.487499999999997,highest
+employmentIndex_A,A,"Agriculture, forestry and fishing",LT,LT,-25.225,lowest
+employmentIndex_A,A,"Agriculture, forestry and fishing",EE,EE,-18.174999999999997,lowest
+employmentIndex_A,A,"Agriculture, forestry and fishing",CH,CH,-9.150000000000006,lowest
