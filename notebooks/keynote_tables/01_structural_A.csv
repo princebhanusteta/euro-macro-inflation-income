@@ -1,0 +1,4 @@
+Model,Type,Preprocess,Hyperparams (searched),Selected / CV note,Normal (≤2019Q4),COVID (2020–21),Surge (2022+)
+M0 baseline (persistence),Rule-based,—,ŷ_t = y_{t-1} within geo,—,MAE 0.429 / RMSE 0.588 (n=1162),MAE 1.113 / RMSE 1.444 (n=265),MAE 1.610 / RMSE 2.246 (n=341)
+MA_Ridge (≤2019Q4),Ridge,StandardScaler(num) + OHE(geo),"alpha ∈ [0.1, 1, 10, 50, 100]",best=100; CV MAE=0.7255,MAE 0.287 / RMSE 0.381 (n=1196),MAE 3.089 / RMSE 3.510 (n=265),MAE 2.810 / RMSE 3.705 (n=341)
+MA_RF (≤2019Q4),RandomForestRegressor,Passthrough(num) + OHE(geo),"n_estimators, max_depth, max_features, min_samples_leaf","best: n_estimators=600, max_depth=12, max_features='sqrt', min_samples_leaf=1; CV MAE=0.4815",MAE 0.139 / RMSE 0.189 (n=1196),MAE 1.530 / RMSE 2.151 (n=265),MAE 3.923 / RMSE 5.820 (n=341)

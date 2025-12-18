@@ -1,0 +1,2 @@
+threshold,how_chosen,note
+0.05,max F1 on calibration window (COVID by default),Low threshold boosts recall; expect more false positives in pre-COVID.

@@ -1,0 +1,11 @@
+Component,Setting / Parameters,Why it matters
+Target,y_inflation_next_q,Next-quarter headline inflation per geo.
+Time span used,2011Q1–2024Q3 (feature-target aligned),Starts effectively at 2011Q1 due to lag/rolling + next-q target.
+Rows / geos / quarters,1802 rows · 34 geos · 55 quarters,After dropping UK; EU27_2020 excluded from fitting (benchmark only).
+Feature space,635 numeric + geo (categorical),No missing values in the final modeling table (no imputation).
+Feature sources,Macro + COICOP + NACE blocks,"Merged by (geo, timeQuarter) with validate='one_to_one'."
+Temporal features,"lag1/lag4, roll4_mean/roll4_std, YoY-change style features",Includes divergence-style inflation features vs EU benchmark.
+Country effects,OneHotEncoder(geo),Fixed effects inside pipeline; handle_unknown='ignore'.
+Scaling,Ridge: StandardScaler(num); RF: passthrough(num),Scaling inside Pipeline prevents leakage.
+CV (structural pool),Expanding-window on ≤2019Q4; validate on 4 quarters,5 folds (quarter-based; no future leakage).
+CV (recent pool),Expanding-window inside 2016Q1–2021Q4,5 folds; then 2022Q1–2024Q3 is the holdout stress-test.

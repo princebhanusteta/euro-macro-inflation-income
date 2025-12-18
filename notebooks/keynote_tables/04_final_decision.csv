@@ -1,0 +1,7 @@
+Candidate,Key setting,MAE on 2022+ holdout,Why it landed there
+M0 baseline,—,1.61,robust anchor; strong under shocks
+MB_Ridge,alpha=200,1.113,best ML generalizer on 2022+ regime
+Ensemble (M0 + MB_Ridge),"w0=0.11 (M0), 0.89 (MB_Ridge)",1.108,slightly best MAE + extra robustness
+MB_RF,"n_estimators=400, max_depth=10",2.373,nonlinear patterns didn’t transfer under break
+MA_Ridge (pre-COVID),alpha=100,2.81,regime shift (structure didn’t transfer)
+MA_RF (pre-COVID),"n_estimators=600, max_depth=12",3.923,regime shift (nonlinear interactions didn’t transfer)

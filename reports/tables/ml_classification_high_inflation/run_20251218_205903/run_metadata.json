@@ -1,0 +1,7 @@
+{
+  "run_id": "20251218_205903",
+  "target": "y_high_inflation_next_q",
+  "features_n": 127,
+  "cv_folds": null,
+  "notes": "GBT=HistGradientBoosting; thresholds chosen by max F1 on COVID window; scenarioFixedX for 2025."
+}

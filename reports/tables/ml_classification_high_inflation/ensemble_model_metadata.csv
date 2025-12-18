@@ -1,0 +1,6 @@
+key,value
+model_family,"ensemble(mean(logit, gbt))"
+threshold,0.04754128385527272
+threshold_calibration_window,COVID (2020-21)
+objective,max F1
+n_rows_validM0,1852
