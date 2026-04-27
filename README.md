@@ -1,34 +1,48 @@
-# European Inflation, Consumer Prices & Household Income Analysis (2000–2024)
+# European Inflation, Employment & Income Analysis
 
-Repository for an end-to-end machine learning project on European inflation, consumer prices and household income for 36 European countries and aggregates (2000Q1–2024Q4).
+End-to-end machine learning and data analysis project on European inflation, consumer prices, household income distribution, and employment dynamics across European countries.
 
-Main goals:
-- Build a clean quarterly panel from Eurostat data (HICP, income distribution, employment).
-- Perform EDA and feature engineering.
-- Train classification, regression and clustering models using scikit-learn.
-- Prepare forecasts for 2025 to be evaluated and extended in the master’s project.
+The project builds clean quarterly panels from Eurostat data, performs exploratory data analysis, engineers macroeconomic features, and applies regression, classification, and clustering models to study inflation behaviour, crisis-period effects, and country/category-level differences.
 
-Notebooks structure:
+## Project Scope
 
-1. `01_merge_raw_to_long.ipynb`  
-   - Load raw Eurostat TSV files.
-   - Convert to tidy long format.
-   - Align all datasets to quarterly frequency (2000Q1–2024Q4).
-   - Save quarterly tables to `data_interim/`.
+This project focuses on four main questions:
 
-2. `02_build_quarterly_panel.ipynb`  
-   - Load quarterly tables from `data_interim/`.
-   - Reindex to a complete geo × timeQuarter grid (including missing years like 2002 in income as explicit NaNs).
-   - Merge HICP, income, and employment into a single **master quarterly panel**.
-   - Save panel to `data_processed/master_quarterly_panel.parquet`.
+1. How do major crises show up in inflation and employment, and how heterogeneous are the effects across European countries?
+2. How does household income distribution evolve over time, especially around crisis periods such as the Global Financial Crisis, COVID-19, and the post-2020 inflation surge?
+3. Which COICOP consumer categories drove the post-2020 inflation surge across geographies?
+4. Can machine learning models support inflation forecasting, high-inflation risk classification, and clustering of inflation archetypes?
 
-3. `03_eda_quarterly_panel.ipynb`  
-   - Exploratory data analysis on the master panel.
-   - Visualisation, descriptive statistics, missingness patterns.
+## Data Sources
 
-4. `04_models_forecasting.ipynb`  
-   - Feature engineering for ML.
-   - Modelling and forecasting tasks.
-   - Backtests and comparison with realised 2025 data (when available).
+The project uses public Eurostat datasets:
 
+- HICP price index  
+  Monthly consumer price index, base year 2015.
 
+- HICP inflation rate  
+  Monthly percentage change, including COICOP consumer categories.
+
+- Household disposable income  
+  Annual income distribution by quantile groups.
+
+- Employment / NACE sector data  
+  Quarterly employment index by economic activity sector.
+
+Raw data files are not stored in this repository. They should be downloaded from Eurostat and placed locally in `data_raw/`.
+
+## Repository Structure
+
+```text
+euro-macro-inflation-income/
+│
+├── data_processed/          # Cleaned and processed panel datasets
+├── data_raw/                # Local raw Eurostat files, not tracked by Git
+├── metadata/                # Human-readable labels for geos, COICOP, NACE, quantiles
+├── notebooks/               # Main analysis and modelling notebooks
+├── reports/                 # Figures, outputs, reports, and presentation material
+├── src/                     # Reusable helper functions and project modules
+│
+├── .gitignore
+├── README.md
+└── environment.yml
